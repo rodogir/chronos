@@ -25,7 +25,7 @@ const DEFAULT_OPTS = {
   name: appName,
   asar: shouldUseAsar,
   ignore: [
-    '^/test($|/)',
+    '^/__tests__($|/)',
     '^/release($|/)',
     '^/main.development.js'
   ].concat(devDeps.map(name => `/node_modules/${name}($|/)`))
