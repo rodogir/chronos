@@ -8,7 +8,7 @@ import {
   findRenderedDOMComponentWithClass,
   Simulate
 } from 'react-addons-test-utils';
-import Counter from '../../app/screens/counter/Counter';
+import Counter from '../Counter';
 
 
 function setup() {
