@@ -5,3 +5,11 @@ general:
 machine:
   node:
     version: 4.5.0
+
+test:
+  override:
+	- npm run lint
+	- npm run test
+	- npm run build
+	- npm run test-e2e
+	- npm run package
