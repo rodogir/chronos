@@ -1,0 +1,7 @@
+general:
+  branches:
+    ignore:
+      - /wip\/.*/
+machine:
+  node:
+    version: 4.5.0
