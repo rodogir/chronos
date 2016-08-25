@@ -5,6 +5,8 @@ general:
 machine:
   node:
     version: 4.5.0
+  environment:
+    BABEL_DISABLE_CACHE: 1
 
 test:
   override:
@@ -12,4 +14,3 @@ test:
     - npm run test
     - npm run build
     - npm run test-e2e
-    - npm run package
