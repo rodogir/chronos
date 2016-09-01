@@ -94,6 +94,7 @@
     "css-modules-require-hook": "^4.0.1",
     "electron-debug": "^1.0.1",
     "font-awesome": "^4.6.3",
+    "moment": "^2.14.1",
     "postcss": "^5.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
