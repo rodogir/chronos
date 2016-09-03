@@ -4,7 +4,7 @@ import moment from "moment";
 export const START_TIME_LOG = "START_TIME_LOG";
 export const STOP_TIME_LOG = "STOP_TIME_LOG";
 
-export function createTimeLog() {
+export function startTimeLog() {
   return {
     type: START_TIME_LOG,
     payload: {
