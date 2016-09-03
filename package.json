@@ -5,7 +5,7 @@
   "description": "Time tracking and syncing application.",
   "main": "main.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --recursive --require ./app/__tests__/setup.js ./app/**/*.spec.js",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --recursive --require ./app/__tests__/setup.js ./app/**/*.test.js",
     "test-watch": "npm test -- --watch",
     "test-e2e": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ./app/__tests__/setup.js ./app/__tests__/e2e.js",
     "lint": "eslint app test *.js",
