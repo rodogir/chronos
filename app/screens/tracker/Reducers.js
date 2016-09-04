@@ -1,37 +1,39 @@
 import {START_TIME_LOG, STOP_TIME_LOG} from "./Actions";
-import {Map, List} from "immutable";
+import {Map, List, fromJS} from "immutable";
 
 const timeLog = (state = Map(), action) => {
-  switch (action.type) {
+  const {type, payload} = action;
+  switch (type) {
     case START_TIME_LOG:
-      return state.push(Immutable.Map({
-        id: action.id,
-        startDate: action.startDate
-      }));
+      return fromJS({
+        id: payload.id,
+        startDate: payload.startDate
+      });
     case STOP_TIME_LOG:
-      return state.set("stopDate", action.stopDate);
+      return state.set("stopDate", payload.stopDate);
     default:
       return state;
   }
 };
 
 const timeLogs = (state = Map(), action) => {
-  switch (action.type) {
+  const {type, payload} = action;
+  switch (type) {
     case START_TIME_LOG:
-      return state.set(action.payload.id, timeLog(undefined, action));
+      return state.set(payload.id, timeLog(undefined, action));
     case STOP_TIME_LOG:
-      return state.set(action.payload.id, timeLog(state.get(action.payload.id, action)));
+      return state.set(payload.id, timeLog(state.get(payload.id), action));
     default:
       return state;
   }
 };
 
-const activeTimeLog = (state, action) => {
-  switch (action.type) {
+const activeTimeLog = (state = null, {type, payload}) => {
+  switch (type) {
     case START_TIME_LOG:
-      return action.id;
+      return payload.id;
     case STOP_TIME_LOG:
-      return undefined;
+      return null;
     default:
       return state;
   }

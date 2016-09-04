@@ -57,6 +57,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "chai-immutable": "^1.6.0",
     "concurrently": "^2.2.0",
     "cross-env": "^2.0.0",
     "css-loader": "^0.24.0",
