@@ -11,7 +11,7 @@ export function startTimeLog() {
       id: uuid.v4(),
       startDate: moment().toISOString()
     }
-  }
+  };
 }
 
 export function stopTimeLog(id) {
@@ -21,5 +21,5 @@ export function stopTimeLog(id) {
       id,
       stopDate: moment().toISOString()
     }
-  }
+  };
 }

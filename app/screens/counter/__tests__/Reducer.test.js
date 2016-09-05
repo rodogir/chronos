@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import counter from '../Reducers';
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../Actions';
+import { expect } from "chai";
+import counter from "../Reducers";
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "../Actions";
 
 
 describe('reducers', () => {

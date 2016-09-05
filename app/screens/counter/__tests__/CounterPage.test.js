@@ -1,14 +1,14 @@
-import { expect } from 'chai';
-import React from 'react';
+import { expect } from "chai";
+import React from "react";
 import {
   renderIntoDocument,
   scryRenderedDOMComponentsWithTag,
   findRenderedDOMComponentWithClass,
   Simulate
-} from 'react-addons-test-utils';
-import { Provider } from 'react-redux';
-import CounterPage from '../CounterPage';
-import configureStore from '../../../config/configureStore';
+} from "react-addons-test-utils";
+import { Provider } from "react-redux";
+import CounterPage from "../CounterPage";
+import configureStore from "../../../config/configureStore";
 
 
 function setup(initialState) {

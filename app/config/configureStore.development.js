@@ -1,20 +1,19 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
-import { hashHistory } from 'react-router';
-import { routerMiddleware, push } from 'react-router-redux';
-import rootReducer from '../reducers';
-
-import * as counterActions from '../screens/counter/Actions';
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import createLogger from "redux-logger";
+import { hashHistory } from "react-router";
+import { routerMiddleware, push } from "react-router-redux";
+import rootReducer from "../reducers";
+import * as counterActions from "../screens/counter/Actions";
 
 const actionCreators = {
   ...counterActions,
-  push,
+  push
 };
 
 const logger = createLogger({
-  level: 'info',
-  collapsed: true,
+  level: "info",
+  collapsed: true
 });
 
 const router = routerMiddleware(hashHistory);
@@ -34,8 +33,8 @@ export default function configureStore(initialState) {
   }
 
   if (module.hot) {
-    module.hot.accept('../reducers', () =>
-      store.replaceReducer(require('../reducers')) // eslint-disable-line global-require
+    module.hot.accept("../reducers", () =>
+      store.replaceReducer(require("../reducers")) // eslint-disable-line global-require
     );
   }
 
