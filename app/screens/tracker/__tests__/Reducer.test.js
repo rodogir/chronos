@@ -1,3 +1,4 @@
+/* eslint no-unused-expressions: 0 */
 import { default as chai, expect } from "chai";
 import chaiImmutable from "chai-immutable";
 import { Map, fromJS } from "immutable";
@@ -72,7 +73,7 @@ describe("reducers", () => {
         payload: { id, stopDate }
       };
       const res = activeTimeLog(id, action);
-      expect(ress).to.be.null;
+      expect(res).to.be.null;
     });
   });
 });
