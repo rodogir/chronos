@@ -9,8 +9,8 @@ export function startTimeLog() {
     type: START_TIME_LOG,
     payload: {
       id: uuid.v4(),
-      startDate: moment().toISOString()
-    }
+      startDate: moment().toISOString(),
+    },
   };
 }
 
@@ -19,7 +19,7 @@ export function stopTimeLog(id) {
     type: STOP_TIME_LOG,
     payload: {
       id,
-      stopDate: moment().toISOString()
-    }
+      stopDate: moment().toISOString(),
+    },
   };
 }

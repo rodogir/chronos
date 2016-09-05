@@ -7,7 +7,7 @@ const timeLog = (state = new Map(), action) => {
     case START_TIME_LOG:
       return fromJS({
         id: payload.id,
-        startDate: payload.startDate
+        startDate: payload.startDate,
       });
     case STOP_TIME_LOG:
       return state.set("stopDate", payload.stopDate);

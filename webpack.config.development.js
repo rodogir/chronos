@@ -10,11 +10,11 @@ export default merge(baseConfig, {
 
   entry: [
     "webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr",
-    "./app/index"
+    "./app/index",
   ],
 
   output: {
-    publicPath: "http://localhost:3000/dist/"
+    publicPath: "http://localhost:3000/dist/",
   },
 
   module: {
@@ -23,27 +23,27 @@ export default merge(baseConfig, {
         test: /\.global\.css$/,
         loaders: [
           "style-loader",
-          "css-loader?sourceMap"
-        ]
+          "css-loader?sourceMap",
+        ],
       },
 
       {
         test: /^((?!\.global).)*\.css$/,
         loaders: [
           "style-loader",
-          "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]"
-        ]
-      }
-    ]
+          "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]",
+        ],
+      },
+    ],
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("development")
-    })
+      "process.env.NODE_ENV": JSON.stringify("development"),
+    }),
   ],
 
-  target: "electron-renderer"
+  target: "electron-renderer",
 });

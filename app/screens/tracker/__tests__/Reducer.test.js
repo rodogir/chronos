@@ -22,7 +22,7 @@ describe("reducers", () => {
       const startDate = "0000";
       const action = {
         type: START_TIME_LOG,
-        payload: { id, startDate }
+        payload: { id, startDate },
       };
       const res = timeLogs(undefined, action);
 
@@ -35,10 +35,10 @@ describe("reducers", () => {
       const stopDate = "9999";
       const action = {
         type: STOP_TIME_LOG,
-        payload: { id, stopDate }
+        payload: { id, stopDate },
       };
       const state = fromJS({
-        [id]: { id, startDate: "0000" }
+        [id]: { id, startDate: "0000" },
       });
       const res = timeLogs(state, action);
       expect(res).to.have.deep.property([id, "stopDate"], stopDate);
@@ -58,7 +58,7 @@ describe("reducers", () => {
       const startDate = "0000";
       const action = {
         type: START_TIME_LOG,
-        payload: { id, startDate }
+        payload: { id, startDate },
       };
       const res = activeTimeLog(null, action);
 
@@ -70,7 +70,7 @@ describe("reducers", () => {
       const stopDate = "9999";
       const action = {
         type: STOP_TIME_LOG,
-        payload: { id, stopDate }
+        payload: { id, stopDate },
       };
       const res = activeTimeLog(id, action);
       expect(res).to.be.null;

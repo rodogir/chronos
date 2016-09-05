@@ -6,7 +6,7 @@ import { getActiveTimeLog } from "./Selectors";
 
 function mapStateToProps(state) {
   return {
-    activeTimeLog: getActiveTimeLog(state)
+    activeTimeLog: getActiveTimeLog(state),
   };
 }
 

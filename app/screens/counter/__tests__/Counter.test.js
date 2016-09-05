@@ -6,7 +6,7 @@ import {
   renderIntoDocument,
   scryRenderedDOMComponentsWithTag,
   findRenderedDOMComponentWithClass,
-  Simulate
+  Simulate,
 } from "react-addons-test-utils";
 import Counter from "../Counter";
 
@@ -15,14 +15,14 @@ function setup() {
     increment: spy(),
     incrementIfOdd: spy(),
     incrementAsync: spy(),
-    decrement: spy()
+    decrement: spy(),
   };
   const component = renderIntoDocument(<Counter counter={1} {...actions} />);
   return {
     component,
     actions,
     buttons: scryRenderedDOMComponentsWithTag(component, "button").map(button => button),
-    p: findRenderedDOMComponentWithClass(component, "counter")
+    p: findRenderedDOMComponentWithClass(component, "counter"),
   };
 }
 

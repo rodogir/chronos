@@ -12,5 +12,5 @@ const getRecentTimeLogs = state => state.timelogs;
 
 export {
   getActiveTimeLog,
-  getRecentTimeLogs
+  getRecentTimeLogs,
 };

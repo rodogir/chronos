@@ -9,7 +9,7 @@ const config = merge(baseConfig, {
   entry: "./app/index",
 
   output: {
-    publicPath: "../dist/"
+    publicPath: "../dist/",
   },
 
   module: {
@@ -19,7 +19,7 @@ const config = merge(baseConfig, {
         loader: ExtractTextPlugin.extract(
           "style-loader",
           "css-loader"
-        )
+        ),
       },
 
       {
@@ -27,26 +27,26 @@ const config = merge(baseConfig, {
         loader: ExtractTextPlugin.extract(
           "style-loader",
           "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]"
-        )
-      }
-    ]
+        ),
+      },
+    ],
   },
 
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
+      "process.env.NODE_ENV": JSON.stringify("production"),
     }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         screw_ie8: true,
-        warnings: false
-      }
+        warnings: false,
+      },
     }),
-    new ExtractTextPlugin("style.css", { allChunks: true })
+    new ExtractTextPlugin("style.css", { allChunks: true }),
   ],
 
-  target: "electron-renderer"
+  target: "electron-renderer",
 });
 
 export default config;

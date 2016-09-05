@@ -8,12 +8,12 @@ import * as counterActions from "../screens/counter/Actions";
 
 const actionCreators = {
   ...counterActions,
-  push
+  push,
 };
 
 const logger = createLogger({
   level: "info",
-  collapsed: true
+  collapsed: true,
 });
 
 const router = routerMiddleware(hashHistory);

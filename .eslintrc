@@ -7,7 +7,6 @@
     "node": true
   },
   "rules": {
-    "comma-dangle": [2, "never"],
     "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "import/no-unresolved": [2, { "ignore": ["electron"] }],
     "import/no-extraneous-dependencies": 0,

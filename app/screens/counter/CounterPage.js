@@ -5,7 +5,7 @@ import * as CounterActions from "./Actions";
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter
+    counter: state.counter,
   };
 }
 

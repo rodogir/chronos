@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
   counter,
   timelogs,
   activeTimeLog,
-  routing
+  routing,
 });
 
 export default rootReducer;
