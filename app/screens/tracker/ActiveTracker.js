@@ -19,7 +19,11 @@ class ActiveTracker extends Component {
 
   render() {
     const timePassed = format(msToDuration(this.getTimePassed()));
-    return <div>Active Tracker: {timePassed}</div>;
+    return (
+      <div>
+        Active Tracker: {timePassed}
+        <button onClick={this.props.stopTimeLog}>Stop</button>
+      </div>);
   }
 }
 
