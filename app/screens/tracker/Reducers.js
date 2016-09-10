@@ -1,7 +1,7 @@
 import { Map, fromJS } from "immutable";
 import { START_TIME_LOG, STOP_TIME_LOG } from "./Actions";
 
-const timeLog = (state = new Map(), action) => {
+function timeLog(state = new Map(), action) {
   const { type, payload } = action;
   switch (type) {
     case START_TIME_LOG:
@@ -14,9 +14,9 @@ const timeLog = (state = new Map(), action) => {
     default:
       return state;
   }
-};
+}
 
-const timeLogs = (state = new Map(), action) => {
+function timeLogs(state = new Map(), action) {
   const { type, payload } = action;
   switch (type) {
     case START_TIME_LOG:
@@ -26,9 +26,9 @@ const timeLogs = (state = new Map(), action) => {
     default:
       return state;
   }
-};
+}
 
-const activeTimeLog = (state = null, { type, payload }) => {
+function activeTimeLog(state = null, { type, payload }) {
   switch (type) {
     case START_TIME_LOG:
       return payload.id;
@@ -37,6 +37,6 @@ const activeTimeLog = (state = null, { type, payload }) => {
     default:
       return state;
   }
-};
+}
 
 export { timeLogs, activeTimeLog };

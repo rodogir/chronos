@@ -1,7 +1,8 @@
 import { createSelector } from "reselect";
+import { Map } from "immutable";
 
 const getActiveTimeLogId = state => state.activeTimeLog;
-const getTimeLogs = state => state.timeLogs;
+const getTimeLogs = state => state.timeLogs || new Map();
 
 const getActiveTimeLog = createSelector(
   [getTimeLogs, getActiveTimeLogId],
